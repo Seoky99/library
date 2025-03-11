@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0; 
+    list-style: none;
+
+    --input-font-size: 1.2rem;  
+}
+
+body {
+    height: 100vh;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+    background-color: lightgray;
+}
+
+.sidebar-container {
+    background-color: lightcoral;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    padding: 2%;
+    display: flex; 
+    flex-direction: column;
+    gap: 10%;
+}
+
+.heading {
+    margin-top: 10%;
+    border-bottom: 5px solid black;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 5% 5% 20% 5%;
+}
+
+.form-container {
+    background-color: #fff;
+}
+
+form > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & li {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+input {
+    height: var(--input-font-size);
+    font-size: calc(var(--input-font-size) * 0.75);
+}
+
+form button {
+    padding: 20px 50px;
+    font-size: var(--input-font-size);
+}
+
+.card-container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-color: red;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    background-color: white;
+
+    & h1 {
+        font-size: 20px; 
+    }
+
+    & button {
+        max-width: 100px;
+        padding: 10px;
+    }
+}

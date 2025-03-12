@@ -19,7 +19,7 @@ body {
 }
 
 .sidebar-container {
-    background-color: lightcoral;
+    background-color: lightblue;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     padding: 2%;
@@ -33,11 +33,14 @@ body {
     border-bottom: 5px solid black;
     border-radius: 10px;
     background-color: #fff;
-    padding: 5% 5% 20% 5%;
+    padding: 5%;
 }
 
 .form-container {
     background-color: #fff;
+    border-bottom: 5px solid black;
+    border-radius: 10px;
+    padding: 5%;
 }
 
 form > ul {
@@ -49,6 +52,10 @@ form > ul {
         display: flex;
         flex-direction: column;
     }
+
+    & li div input {
+        vertical-align: middle;
+    }
 }
 
 input {
@@ -56,22 +63,32 @@ input {
     font-size: calc(var(--input-font-size) * 0.75);
 }
 
+input:user-invalid {
+    border: 1px solid red;
+}
+
 form button {
     padding: 20px 50px;
     font-size: var(--input-font-size);
+    margin-top: 5%;
 }
 
 .card-container {
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    background-color: red;
+    gap: 2%;
+    padding: 10px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    gap: 10px; 
+    gap: 5px; 
     background-color: white;
+    padding: 20px;
+    max-width: 200px;    
+    border-bottom: 5px solid black;
+    border-radius: 10px;
 
     & h1 {
         font-size: 20px; 

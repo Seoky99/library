@@ -1,6 +1,19 @@
 let myLibrary = [];
 
-//Book Constructor
+class Book {
+    constructor(author, title, numPages, beenRead) {
+        this.author = author;
+        this.title = title;
+        this.numPages = numPages;
+        this.beenRead = beenRead; 
+        this.id = crypto.randomUUID(); 
+    }
+    toggleMe() {
+        this.beenRead = !this.beenRead; 
+    }
+}
+
+/*//Book Constructor
 function Book(author, title, numPages, beenRead) {
     this.author = author;
     this.title = title;
@@ -11,7 +24,7 @@ function Book(author, title, numPages, beenRead) {
 
 Book.prototype.toggleMe = function() {
     this.beenRead = !this.beenRead; 
-}
+} */
 
 function addBookToLibrary(author, title, numPages, beenRead) {
     let book = new Book(author, title, numPages, beenRead); 

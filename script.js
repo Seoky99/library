@@ -102,6 +102,24 @@ function addOne(elt) {
 function formSubmit() {
 
     let form = document.querySelector("form"); 
+    
+    let nameInput = document.getElementById("name");
+
+    nameInput.addEventListener("input", (e) => {
+
+        nameInput.setCustomValidity("");
+
+        if (!nameInput.validity.valid) {
+            return; 
+        }
+
+        if (nameInput.value.length < 2) {
+            nameInput.setCustomValidity("Please input a valid book title.");
+        }
+    });
+
+
+
     form.addEventListener("submit", (e) => {
 
         e.preventDefault(); 
